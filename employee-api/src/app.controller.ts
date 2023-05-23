@@ -7,11 +7,14 @@ import {
   Param,
   HttpCode,
   Put,
+  UsePipes,
+  ValidationPipe,
 } from '@nestjs/common';
 import {
   InMemoryDBEntity,
   InMemoryDBService,
 } from '@nestjs-addons/in-memory-db';
+import { EmployeeDTO } from './dto/EmployeeDTO';
 
 interface EmployeeEntity extends InMemoryDBEntity {
   dob: string;
@@ -57,7 +60,8 @@ export class AppController {
 
   @Post('/api/employees')
   @HttpCode(201)
-  createEmployee(@Body() newEmployee: EmployeeEntity): EmployeeEntity {
+  @UsePipes(new ValidationPipe())
+  createEmployee(@Body() newEmployee: EmployeeDTO): EmployeeEntity {
     return this.employeeService.create(newEmployee);
   }
 
