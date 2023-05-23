@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cd employee-api && npm install && nest start"
+    "start": "cd employee-api && npm install && npx nest start"
   },
   "author": "Razvan Vancea",
   "license": "ISC",
