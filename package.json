@@ -1,0 +1,14 @@
+{
+  "name": "nestjs-in-memory-db-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Razvan Vancea",
+  "license": "ISC",
+  "dependencies": {
+    "@nestjs-addons/in-memory-db": "^3.0.3"
+  }
+}
